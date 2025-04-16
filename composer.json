@@ -1,7 +1,7 @@
 {
   "name": "parsecvpn/api-php-sdk",
   "authors": [
-    "parsecvpn.online"
+    {"homepage": "https://parsecvpn.online", "email": "support@parsecvpn.online", "name": "ParsecVPN"}
   ],
   "description": "Heleket api SDK",
   "type": "library",
