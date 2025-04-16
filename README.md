@@ -1,22 +1,22 @@
-# Cryptomus PHP SDK
+# Heleket PHP SDK
 
-PHP SDK module for working with the Cryptomus API
+PHP SDK module for working with the Heleket API
 
 ## Installation and connection
 
 Installation using [composer](https://getcomposer.org/download/):
 
 ```bash
-$ composer require cryptomus/api-php-sdk
+$ composer require Heleket/api-php-sdk
 ```
 
 ## Documentation
 
-**Methods for working with api**: https://doc.cryptomus.com/ <br>
+**Methods for working with api**: https://doc.Heleket.com/ <br>
 
 ## Authorization
 
-`PAYOUT_KEY` or `PAYMENT_KEY`, also `MERCHANT_UUID` required to use SDK details in [documentation](https://doc.cryptomus.com/general/request).
+`PAYOUT_KEY` or `PAYMENT_KEY`, also `MERCHANT_UUID` required to use SDK details in [documentation](https://doc.Heleket.com/general/request).
 
 ```php
 <?php
@@ -24,7 +24,7 @@ $ composer require cryptomus/api-php-sdk
 const PAYMENT_KEY = 'uQ4LFWCBE3dT84uQnt7ycL7p9WcSwjkSPQaZbik3ChoWO0egw51f4EAaZQKmefhPP0F1cX8OpRcl2c3HexNedoR7FGEYGA1mTgMPI8lzKl7Ct2I43R6SSC3gVDS3rkGX';
 const MERCHANT_UUID = 'c26b80a8-9549-4a66-bb53-774f12809249';
 
-$payment = \Cryptomus\Api\Client::payment(PAYMENT_KEY, MERCHANT_UUID);
+$payment = \Heleket\Api\Client::payment(PAYMENT_KEY, MERCHANT_UUID);
 
 ?>
 ```
@@ -35,7 +35,7 @@ $payment = \Cryptomus\Api\Client::payment(PAYMENT_KEY, MERCHANT_UUID);
 const PAYOUT_KEY = 'qseRhcxu6wsxhygfhyidwrrgryrrgefhPP0F1cNedoR7FGEYGA1mTgMPX8OpRcl2c3HexNedoR7FGEYGA1mTgMPI8lzKl7Ct2I43R6S1f4EAaZQKmefhSC3gVDS3rkGX';
 const MERCHANT_UUID = 'c26b80a8-9549-4a66-bb53-774f12809249';
 
-$payout = \Cryptomus\Api\Client::payout(PAYOUT_KEY, MERCHANT_UUID);
+$payout = \Heleket\Api\Client::payout(PAYOUT_KEY, MERCHANT_UUID);
 
 ?>
 ```
@@ -217,7 +217,7 @@ array(14) {
   ["payment_status"]=>
   string(5) "check"
   ["url"]=>
-  string(66) "https://pay.cryptomus.com/pay/8b03432e-385b-4670-8d06-064591096795"
+  string(66) "https://pay.Heleket.com/pay/8b03432e-385b-4670-8d06-064591096795"
   ["expired_at"]=>
   int(1650980953)
   ["status"]=>
@@ -268,7 +268,7 @@ array(15) {
   ["payment_status"]=>
   string(5) "check"
   ["url"]=>
-  string(66) "https://pay.cryptomus.com/pay/8b03432e-385b-4670-8d06-064591096795"
+  string(66) "https://pay.Heleket.com/pay/8b03432e-385b-4670-8d06-064591096795"
   ["expired_at"]=>
   int(1650980953)
   ["status"]=>
@@ -321,7 +321,7 @@ array(2) {
       ["payment_status"]=>
       string(4) "paid"
       ["url"]=>
-      string(66) "https://pay.cryptomus.com/pay/87094a43-5fe4-4629-b2fd-c37e8e2af76c"
+      string(66) "https://pay.Heleket.com/pay/87094a43-5fe4-4629-b2fd-c37e8e2af76c"
       ["expired_at"]=>
       int(1650960209)
       ["status"]=>
@@ -544,12 +544,12 @@ All methods can throw RequestBuilderException.
 ```php
 <?php
 
-$payment = \Cryptomus\Api\Client::payment(PAYOUT_KEY, MERCHANT_UUID);
+$payment = \Heleket\Api\Client::payment(PAYOUT_KEY, MERCHANT_UUID);
 
 try {
     $result = $payment->services();
-} catch (\Cryptomus\Api\RequestBuilderException $e) {
-    log('Error request Cryptomus to method ' . $e->getMethod() . ': ' . $e->getMessage());
+} catch (\Heleket\Api\RequestBuilderException $e) {
+    log('Error request Heleket to method ' . $e->getMethod() . ': ' . $e->getMessage());
 }
 
 ?>
