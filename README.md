@@ -7,7 +7,7 @@ PHP SDK module for working with the Heleket API
 Installation using [composer](https://getcomposer.org/download/):
 
 ```bash
-$ composer require Heleket/api-php-sdk
+$ composer require heleket/api-php-sdk
 ```
 
 ## Documentation
